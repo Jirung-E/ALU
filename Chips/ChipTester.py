@@ -11,6 +11,11 @@ def test(chip):
             testOR()
         elif chip == "AND":
             testAND()
+        elif chip == "XOR":
+            testXOR()
+        else:
+            print("No such chip: " + chip)
+            return
         print("Success.")
     except:
         print("Failed.")
