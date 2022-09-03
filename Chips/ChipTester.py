@@ -7,6 +7,8 @@ def test(chip):
             testNAND()
         elif chip == "NOT":
             testNOT()
+        elif chip == "OR":
+            testOR()
         print("Success.")
     except:
         print("Failed.")
