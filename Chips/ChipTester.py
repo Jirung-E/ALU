@@ -13,6 +13,8 @@ def test(chip):
             testAND()
         elif chip == "XOR":
             testXOR()
+        elif chip == "MUX":
+            testMUX()
         else:
             print("No such chip: " + chip)
             return
