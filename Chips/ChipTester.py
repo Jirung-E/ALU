@@ -1,9 +1,13 @@
-from .NAND import *
+from .Chips import *
 
 def test(chip):
     print("Test " + chip + "...")
     try:
-        testNAND()
+        if chip == "NAND":
+            testNAND()
+        elif chip == "NOT":
+            testNOT()
         print("Success.")
     except:
         print("Failed.")
+    print()
