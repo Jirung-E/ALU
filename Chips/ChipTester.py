@@ -15,6 +15,8 @@ def test(chip):
             testXOR()
         elif chip == "MUX":
             testMUX()
+        elif chip == "DEMUX":
+            testDEMUX()
         else:
             print("No such chip: " + chip)
             return
