@@ -9,6 +9,8 @@ def test(chip):
             testNOT()
         elif chip == "OR":
             testOR()
+        elif chip == "AND":
+            testAND()
         print("Success.")
     except:
         print("Failed.")
