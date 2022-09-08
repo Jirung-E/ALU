@@ -5,3 +5,6 @@ from .AND import *
 from .XOR import *
 from .Multiplexer import *
 from .DeMultiplexer import *
+from .HalfAdder import *
+from .FullAdder import *
+from .Adder8bit import *

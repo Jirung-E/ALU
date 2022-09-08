@@ -17,6 +17,12 @@ def test(chip):
             testMUX()
         elif chip == "DEMUX":
             testDEMUX()
+        elif chip == "HalfAdder":
+            testHalfAdder()
+        elif chip == "FullAdder":
+            testFullAdder()
+        elif chip == "Adder8bit":
+            testAdder8bit()
         else:
             print("No such chip: " + chip)
             return
