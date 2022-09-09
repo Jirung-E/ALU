@@ -39,8 +39,14 @@ def MUX8bit4in(a: str, b: str, c: str, d: str, selector: str):
 def INC8bit(in_: str):
     return Adder8bit(in_, "00000001")
 
+def MINUS(in_: str):
+    result = ""
+    for e in in_[:]:
+        result = result + str(NOT(int(e)))
+    return INC8bit(result)
+
 def ALU(in1: str, in2: str, selector: str):
-    return MUX8bit4in(Adder8bit(in1, in2), INC8bit(in1), "00000000", "11111111", selector)
+    return MUX8bit4in(Adder8bit(in1, in2), INC8bit(in1), MINUS(in1), "00000000", selector)
 
 def testALU():
     print(f"01101011 00010101 00: {ALU('01101011', '00010101', '00')}")
@@ -49,5 +55,5 @@ def testALU():
     print(f"01101011 00010101 11: {ALU('01101011', '00010101', '11')}")
     assert ALU('01101011', '00010101', '00') == Adder8bit('01101011', '00010101')
     assert ALU('01101011', '00010101', '01') == INC8bit('01101011')
-    assert ALU('01101011', '00010101', '10') == "00000000"
-    assert ALU('01101011', '00010101', '11') == "11111111"
+    assert ALU('01101011', '00010101', '10') == MINUS('01101011')
+    assert ALU('01101011', '00010101', '11') == "00000000"
