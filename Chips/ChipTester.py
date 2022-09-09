@@ -26,6 +26,8 @@ def test(chip):
             testAdder8bit()
         elif chip == "ALU_":
             testALU_()
+        elif chip == "ALU":
+            testALU()
         else:
             print("No such chip: " + chip)
             return

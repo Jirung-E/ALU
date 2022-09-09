@@ -1,5 +1,4 @@
 from Chips.ChipTester import *
-from Chips.ALU import ALU_, testALU_
 
 test("NAND")
 test("NOT")
@@ -12,3 +11,4 @@ test("HalfAdder")
 test("FullAdder")
 test("Adder8bit")
 test("ALU_")
+test("ALU")
