@@ -1,4 +1,5 @@
 from .Chips import *
+from .ALU import *
 
 def test(chip):
     print("Test " + chip + "...")
@@ -23,6 +24,8 @@ def test(chip):
             testFullAdder()
         elif chip == "Adder8bit":
             testAdder8bit()
+        elif chip == "ALU_":
+            testALU_()
         else:
             print("No such chip: " + chip)
             return
